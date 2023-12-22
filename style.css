@@ -71,6 +71,7 @@ nav a {
 .section-padding {
     padding: 20px 0;    
     margin-left: 20px;    
+    width: 100%;
 }
 
 .content-boxes {
@@ -183,34 +184,31 @@ nav a {
 /* Container für den Kontaktbereich */
 #contact {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Zentriert die Elemente und gibt ihnen etwas Abstand */
-    align-items: flex-start; /* Start ausrichtung */
+    align-items: flex-start; /* Ausrichtung am Anfang */
+    justify-content: space-between; /* Gibt etwas Abstand zwischen den Elementen */
+    padding: 0 20px; /* Fügt horizontalen Abstand hinzu */
 }
 
-/* Stil für das Kontaktformular und den Textbereich, um sie nebeneinander anzuzeigen */
-.contact-text, .form-container {
-    flex: 1;
-    min-width: 250px; /* Minimale Breite, damit die Elemente nicht zu schmal werden */
-    max-width: 50%; /* Maximale Breite von 50%, um sie auf die Hälfte des Containers zu beschränken */
+.form-container {
+    flex: 1; /* Erlaubt dem Formular zu wachsen und bis zu 50% der Containerbreite einzunehmen */
+    max-width: 45%; /* Beschränkt die maximale Breite des Formulars auf 45% */
 }
 
-/* Kontaktinformationen unter dem Textbereich */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0; /* Abstand oben und unten */
+.contact-text {
+    flex: 1; /* Erlaubt dem Text zu wachsen und bis zu 50% der Containerbreite einzunehmen */
+    max-width: 45%; /* Beschränkt die maximale Breite des Textes auf 45% */
+    padding-right: 30px;
 }
 
-/* Stil-Anpassung für Icons und Text in der Kontaktinfo */
-.contact-info p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Abstand zwischen den Kontaktinformationen */
-}
+@media (max-width: 768px) {
+    #contact {
+        flex-direction: column; /* Stapelt die Elemente auf kleineren Bildschirmen */
+    }
 
-.contact-info i {
-    margin-right: 10px;
+    .form-container,
+    .contact-text {
+        max-width: 100%; /* Erlaubt Text und Formular die volle Breite auf kleineren Bildschirmen einzunehmen */
+    }
 }
 
 /* Stil für das Formular */
@@ -219,13 +217,6 @@ form {
     padding: 20px;
     border-radius: 10px; /* Abgerundete Ecken für das Formular */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Leichter Schatten für Tiefe */
-}
-
-@media (max-width: 768px) {
-    /* Anpassungen für kleinere Bildschirme */
-    .contact-text, .form-container {
-        max-width: 100%; /* Lässt Text und Formular die volle Breite einnehmen */
-    }
 }
 
 
@@ -259,4 +250,14 @@ footer {
     bottom: 0;
     width: 100%;
     background: #f5f5f5;
+}
+
+#form-message-success {
+    color: green;
+    background-color: #e7f9e7;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none; /* Standardmäßig versteckt */
 }
