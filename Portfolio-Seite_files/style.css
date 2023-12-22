@@ -1,0 +1,221 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;    
+    background-color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;  
+    padding: 1em; 
+    background-image: url('images/Bern.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;  
+}
+
+.intro {
+    position: absolute;
+    top: 30%;
+    right: 2em;
+    transform: translateY(-50%);
+    color: black;
+    max-width: 100%;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner h1 {
+    margin: 0;
+    float: left;
+}
+
+nav {
+    margin: 0;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+    }
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.section-padding {
+    padding: 20px 0;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.content-boxes, .project-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-box, .project {
+    flex: 0 0 100%;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .content-box, .project {
+        flex: 0 0 48%;
+        margin: 1%;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-box, .project {
+        flex: 0 0 30%;
+    }
+}
+
+.img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.cv-button, .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cv-button:hover, .download-button:hover, 
+.cv-button:focus, .download-button:focus {
+    background-color: grey;
+}
+
+.cv-button i, .download-button i {
+    margin-left: 5px;
+}
+
+.timeline ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+.timeline ul li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.timeline ul li:before {
+    content: ' ';
+    background: #333;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+}
+
+.timeline time {
+    font-weight: bold;
+}
+
+#contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.form-container, .contact-text {
+    flex: 1;
+    min-width: 45%;
+    padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+    #contact {
+        flex-direction: column;
+    }
+
+    .form-container, .contact-text {
+        max-width: 100%;
+    }
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+button {
+    padding: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;    
+    bottom: 0;
+    width: 100%;
+    background: #f5f5f5;
+}
+
+#form-message-success {
+    color: green;
+    background-color: #e7f9e7;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none; /* Standardmäßig versteckt */
+}
