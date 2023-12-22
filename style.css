@@ -2,7 +2,8 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Helvetica, sans-serif;
+    font-family: sans-serif;    
+    background-color: #f5f5f5;
 }
 
 header {
@@ -12,28 +13,18 @@ header {
     background-image: url('images/Bern.jpg');
     background-size: cover;
     background-position: center;
-    height: 70vh; /* Vollbild Header */
-    position: relative;    
-}
-
-.portrait {
-    position: absolute; /* Absolute Positionierung im Bezug zum Header */
-    bottom: 10%; /* Position am unteren Rand des Headers */
-    right: 0; /* Zentriert das Bild horizontal */
-    transform: translateX(-50%); /* Verschiebt das Bild zurück um seine eigene Hälfte */
-    height: 400px; /* Höhe des Bildes festlegen */
-    width: auto; /* Breite automatisch anpassen */
-    z-index: 10; /* Stellt sicher, dass das Bild über den anderen Elementen liegt */
-    border-radius: 50%; /* Rounded Corners */    
+    height: 100vh; /* Vollbild Header */
+    position: relative; 
+    font-family: sans-serif;   
 }
 
 .intro {
     position: absolute;
     top: 30%; /* Positioniert die Mitte des Containers in der Mitte des Headers */
-    left: 1em%; /* Abstand vom linken Rand, passen Sie nach Bedarf an */
+    right: 2em; /* Abstand vom linken Rand, passen Sie nach Bedarf an */
     transform: translateY(-50%); /* Verschiebt den Container zurück um seine eigene Hälfte */
     color: black; /* Stellen Sie sicher, dass der Text lesbar ist */
-    max-width: 40%; /* Maximale Breite des Textcontainers */
+    max-width: 100%; /* Maximale Breite des Textcontainers */
 }
 
 .banner {
@@ -56,6 +47,15 @@ nav ul {
     padding: 0;
     margin: 0; /* Entfernt den Standard-Margin */
     display: flex;
+    flex-direction: column; /* Stapelt die Links auf kleinen Bildschirmen */
+    align-items: center; /* Zentriert die Links */
+}
+
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Horizontale Anordnung auf größeren Bildschirmen */
+    }
 }
 
 nav li {
@@ -70,6 +70,12 @@ nav a {
 
 .section-padding {
     padding: 50px 0;
+    
+}
+
+.content-boxes {
+    display: flex;
+    flex-wrap: wrap; /* Ermöglicht das Umfließen von Boxen auf kleineren Bildschirmen */
 }
 
 .content-boxes, .project-grid {
@@ -79,19 +85,92 @@ nav a {
 }
 
 .content-box, .project {
-    color: black;
-    background: white;
-    width: 30%;
-    height: 200px;
+    flex: 0 0 100%; /* Auf kleinen Bildschirmen nehmen Boxen volle Breite ein */
     margin: 10px;
+    box-sizing: border-box; /* Inkludiert Padding und Border in die Breite */
 }
 
-.contact-info {
+/* Media Query für Tablets */
+@media (min-width: 768px) {
+    .content-box, .project {
+        flex: 0 0 48%; /* Auf mittleren Bildschirmen nehmen Boxen etwa die Hälfte der Breite ein */
+        margin: 1%;
+    }
+}
+
+/* Media Query für Desktop-Bildschirme */
+@media (min-width: 992px) {
+    .content-box, .project {
+        flex: 0 0 30%; /* Auf größeren Bildschirmen nehmen Boxen ein Drittel der Breite ein */
+    }
+}
+
+.timeline ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+.timeline ul li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.timeline ul li:before {
+    content: ' ';
+    background: #333;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+}
+
+.timeline time {
+    font-weight: bold;
+}
+
+
+.contact-info p{
+    display: flex;
+    align-items: center;
     color: black; 
-    background: white;
+    background: white;    
     height: 200px;
     margin: auto;
     padding: 10px;
+}
+
+.contact-info i{
+    margin-right: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+button {
+    padding: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: grey;
 }
 
 footer {
