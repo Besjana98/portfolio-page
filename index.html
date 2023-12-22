@@ -1,40 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio-Seite</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact-info">Contact Info</a></li>
-            </ul>
-        </nav>
+        <div class="banner">
+            <h1>Portfolio-Seite</h1>            
+            <nav>
+                <ul>
+                    <li><a href="#about-me">Über mich</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact-info">Kontakt Info</a></li>
+                </ul>
+            </nav>
+            <img src="images/Bild1.jpg" alt="Besjana Latifi" class="portrait">
+            <div class="intro"
+                <p>Herzlich Willkommen!</p>
+                <h2>Mein Name ist Besjana Latifi</h2>
+                <p>Dies ist meine Portfolio-Seite, auf der ich mich, meine Projekte und Fähigkeiten präsentiere.</p>
+            </div>    
+        </div>
     </header>
 
-    <main class="container">
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa ex, nec eleifend orci placerat id.</p>
-        </section>
+    <section id="about-me" class="section-padding">
+        <h2>Über mich</h2>                     
+        <div class="content-boxes">
+            <div class="content-box">
+                <section id="steckbrief">
+                    <h3>Steckbrief</h3>
+                    <img src="images/Steckbrief.jpg" alt="Steckbrief" class="portrait">
+                    <p>Name: Besjana Latifi</p>
+                    <p>Geburtsdatum: 26. Januar 1998</p>
+                    <p>Geburtsort: Ittigen</p>
+                </section>
+            </div>            
+            <div class="content-box">
+                <section id="beruf">
+                    <h3>Beruf</h3>
+                    <img src="images/Beruf.jpg" alt="Beruf" class="portrait">
+                    <p>Ich bin Beruf der Webentwicklung und Frontend-Entwicklung. Ich bin Beruf der Backend-Entwicklung.</p>
+                </section>
+            </div>
+            <div class="content-box">
+                <section id="beruf">
+                    <h3>Beruf</h3>
+                    <img src="images/Beruf.jpg" alt="Beruf" class="portrait">
+                    <p>Ich bin Beruf der Webentwicklung und Frontend-Entwicklung. Ich bin Beruf der Backend-Entwicklung.</p>
+                </section>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa ex, nec eleifend orci placerat id.</p>
-        </section>
+    <section id="projects" class="section-padding">
+        <h2>Projekte</h2>
+        <div class="project-grid">
+            <div class="project">
+                <section id="TWINT" class="project-grid-section">
+                    <h3>TWINT</h3>
+                    <img src="images/TWINT.jpg" alt="TWINT" class="portrait">
+                    <p>TWINT ist eine Webentwicklung- und Frontend-Entwicklung-Projekte. Ich bin Beruf der Webentwicklung und Frontend-Entwicklung. Ich bin Beruf der Backend-Entwicklung.</p>
+                </section>
+            </div>
+            <div class="project">
+                <section id="TWINT" class="project-grid-section">
+                    <h3>TWINT</h3>
+                    <img src="images/TWINT.jpg" alt="TWINT" class="portrait">
+                    <p>TWINT ist eine Webentwicklung- und Frontend-Entwicklung-Projekte. Ich bin Beruf der Webentwicklung und Frontend-Entwicklung. Ich bin Beruf der Backend-Entwicklung.</p>
+                </section>
+            </div>
+            <div class="project">
+                <section id="TWINT" class="project-grid-section">
+                    <h3>TWINT</h3>
+                    <img src="images/TWINT.jpg" alt="TWINT" class="portrait">
+                    <p>TWINT ist eine Webentwicklung- und Frontend-Entwicklung-Projekte. Ich bin Beruf der Webentwicklung und Frontend-Entwicklung. Ich bin Beruf der Backend-Entwicklung.</p>
+                </section>
+            </div>            
+        </div>
+    </section>
 
-        <section id="contact-info">
-            <h2>Contact Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor massa ex, nec eleifend orci placerat id.</p>
-        </section>
-    </main>
+    <section id="contact-info" class="section-padding">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p>Hier können Sie mich kontaktieren:        
+            <ul>
+                <li><a href="mailto:<besjana.latifi@students.bfh.ch>"><EMAIL></a></li>
+                <li><a href="linkedin.com/in/besjana-latifi-0a0607252">https://www.linkedin.com/in/besjana-latifi/</a></li>
+            </ul></p>
+        </div>             
+    </section>
 
-    <script src="scripts.js"></script>
+    <footer>
+        <p>© 2023 Besjana Latifi</p>
+    </footer>
 </body>
 </html>

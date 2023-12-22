@@ -1,70 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-image: url('city.jpg');
-    background-size: cover;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
 }
 
 header {
-    background-color: #f1f1f1;
-    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Setzt Inhalte auf beiden Enden */   
+    padding: 1em; /* Fügt Padding hinzu */    
+    background-image: url('images/Bern.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Vollbild Header */
+    position: relative;    
 }
 
-header ul {
+.portrait {
+    position: absolute; /* Absolute Positionierung im Bezug zum Header */
+    bottom: 10%; /* Position am unteren Rand des Headers */
+    right: 0; /* Zentriert das Bild horizontal */
+    transform: translateX(-50%); /* Verschiebt das Bild zurück um seine eigene Hälfte */
+    height: 400px; /* Höhe des Bildes festlegen */
+    width: auto; /* Breite automatisch anpassen */
+    z-index: 10; /* Stellt sicher, dass das Bild über den anderen Elementen liegt */
+    border-radius: 50%; /* Rounded Corners */    
+}
+
+.intro {
+    position: absolute;
+    top: 30%; /* Positioniert die Mitte des Containers in der Mitte des Headers */
+    left: 1em%; /* Abstand vom linken Rand, passen Sie nach Bedarf an */
+    transform: translateY(-50%); /* Verschiebt den Container zurück um seine eigene Hälfte */
+    color: black; /* Stellen Sie sicher, dass der Text lesbar ist */
+    max-width: 40%; /* Maximale Breite des Textcontainers */
+}
+
+.banner {
+    width: 100%; /* Damit der Banner die volle Breite einnimmt */
+}
+
+.banner h1 {
+    margin: 0;
+    float: left;
+    
+}
+
+nav {
+    margin: 0;
+    float: right;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Entfernt den Standard-Margin */
+    display: flex;
 }
 
-header ul li {
-    display: inline;
-    margin-left: 10px;
+nav li {
+    margin: 0 10px;
 }
 
-header ul li a {
+nav a {
+    color: black;
     text-decoration: none;
-    color: #333;
 }
 
-header ul li a:hover {
-    color: #4682B4;
-}
 
-main {
+.section-padding {
     padding: 50px 0;
 }
 
-section {
-    margin-bottom: 50px;
+.content-boxes, .project-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-section h2 {
-    color: #4682B4;
-    margin-bottom: 20px;
-}
-
-section p {
-    line-height: 1.6;
-}
-
-.picture {
-    width: 200px;
+.content-box, .project {
+    color: black;
+    background: white;
+    width: 30%;
     height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
-.picture img {
+.contact-info {
+    color: black; 
+    background: white;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;    
+    bottom: 0;
     width: 100%;
-    height: auto;
+    background: white;
 }
