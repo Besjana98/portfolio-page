@@ -8,33 +8,31 @@ body, html {
 
 header {
     display: flex;
-    justify-content: space-between; /* Setzt Inhalte auf beiden Enden */   
-    padding: 1em; /* Fügt Padding hinzu */    
+    justify-content: space-between;  
+    padding: 1em; 
     background-image: url('images/Bern.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Vollbild Header */
-    position: relative; 
-    font-family: sans-serif;   
+    height: 100vh;
+    position: relative;  
 }
 
 .intro {
     position: absolute;
-    top: 30%; /* Positioniert die Mitte des Containers in der Mitte des Headers */
-    right: 2em; /* Abstand vom linken Rand, passen Sie nach Bedarf an */
-    transform: translateY(-50%); /* Verschiebt den Container zurück um seine eigene Hälfte */
-    color: black; /* Stellen Sie sicher, dass der Text lesbar ist */
-    max-width: 100%; /* Maximale Breite des Textcontainers */
+    top: 30%;
+    right: 2em;
+    transform: translateY(-50%);
+    color: black;
+    max-width: 100%;
 }
 
 .banner {
-    width: 100%; /* Damit der Banner die volle Breite einnimmt */
+    width: 100%;
 }
 
 .banner h1 {
     margin: 0;
     float: left;
-    
 }
 
 nav {
@@ -45,16 +43,15 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Entfernt den Standard-Margin */
+    margin: 0;
     display: flex;
-    flex-direction: column; /* Stapelt die Links auf kleinen Bildschirmen */
-    align-items: center; /* Zentriert die Links */
+    flex-direction: column;
+    align-items: center;
 }
-
 
 @media (min-width: 768px) {
     nav ul {
-        flex-direction: row; /* Horizontale Anordnung auf größeren Bildschirmen */
+        flex-direction: row;
     }
 }
 
@@ -67,16 +64,10 @@ nav a {
     text-decoration: none;
 }
 
-
 .section-padding {
-    padding: 20px 0;    
-    margin-left: 20px;    
+    padding: 20px 0;
+    margin-left: 20px;
     width: 100%;
-}
-
-.content-boxes {
-    display: flex;
-    flex-wrap: wrap; /* Ermöglicht das Umfließen von Boxen auf kleineren Bildschirmen */
 }
 
 .content-boxes, .project-grid {
@@ -86,85 +77,65 @@ nav a {
 }
 
 .content-box, .project {
-    flex: 0 0 100%; /* Auf kleinen Bildschirmen nehmen Boxen volle Breite ein */
+    flex: 0 0 100%;
     margin: 20px;
-    box-sizing: border-box; /* Inkludiert Padding und Border in die Breite */
+    box-sizing: border-box;
 }
 
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;    
-    background-color: black; /* Auffällige Farbe für den Download-Button */
-    color: white; /* Textfarbe */
-    text-decoration: none; /* Entfernt die Unterstreichung */
-    border-radius: 20px; /* Leicht abgerundete Ecken */
-    font-weight: bold; /* Fettdruck */
-    transition: background-color 0.3s; /* Animiert die Hintergrundfarbe beim Hover */
-    border: none; /*kein Rahmen*/
-    cursor: pointer;
-    text-align: center; /* Zentrierter Text */
-    width: auto; /* Automatische Breite basierend auf Inhalt */
-}
-
-.download-button:hover, .download-button:focus {
-    background-color: grey; /* Dunklere Farbe beim Hover oder Fokus */
-}
-
-
-/* Media Query für Tablets */
 @media (min-width: 768px) {
     .content-box, .project {
-        flex: 0 0 48%; /* Auf mittleren Bildschirmen nehmen Boxen etwa die Hälfte der Breite ein */
+        flex: 0 0 48%;
         margin: 1%;
     }
 }
 
-/* Media Query für Desktop-Bildschirme */
 @media (min-width: 992px) {
     .content-box, .project {
-        flex: 0 0 30%; /* Auf größeren Bildschirmen nehmen Boxen ein Drittel der Breite ein */
+        flex: 0 0 30%;
     }
 }
 
 .img {
-    width: 250px;  /* Setzt die Standardbreite für alle Bilder mit der Klasse 'img' */
-    height: 250px; /* Setzt die Standardhöhe für alle Bilder mit der Klasse 'img' */
-    object-fit: cover; /* Sorgt dafür, dass die Bilder das Container-Element voll ausfüllen, ohne das Seitenverhältnis zu verzerren */
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
 }
 
-.cv-button {
+.cv-button, .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: black; /* oder eine Farbe Ihrer Wahl */
-    color: white; /* Farbe des Textes */
-    text-decoration: none; /* Keine Unterstreichung */
-    border-radius: 20px; /* Abgerundete Ecken */
-    font-weight: bold; /* Fettdruck */
-    transition: background-color 0.3s; /* Glatter Farbwechsel */
-    border: none; /* Kein Rahmen */
-    cursor: pointer; /* Cursor wird zum Klick-Symbol */
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
-.cv-button:hover {
-    background-color: grey; /* Dunklere Farbe beim Hover */
+.cv-button:hover, .download-button:hover, 
+.cv-button:focus, .download-button:focus {
+    background-color: grey;
 }
 
-.cv-button i {
-    margin-left: 5px; /* Kleiner Abstand zwischen Text und Icon */
+.cv-button i, .download-button i {
+    margin-left: 5px;
 }
-
-
 
 .timeline ul {
     list-style-type: none;
     padding: 0;
     position: relative;
 }
+
 .timeline ul li {
     padding-left: 20px;
     margin-bottom: 10px;
     position: relative;
 }
+
 .timeline ul li:before {
     content: ' ';
     background: #333;
@@ -180,56 +151,43 @@ nav a {
     font-weight: bold;
 }
 
-
-/* Container für den Kontaktbereich */
 #contact {
     display: flex;
-    align-items: flex-start; /* Ausrichtung am Anfang */
-    justify-content: space-between; /* Gibt etwas Abstand zwischen den Elementen */
-    padding: 0 20px; /* Fügt horizontalen Abstand hinzu */
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.form-container {
-    flex: 1; /* Erlaubt dem Formular zu wachsen und bis zu 50% der Containerbreite einzunehmen */
-    max-width: 45%; /* Beschränkt die maximale Breite des Formulars auf 45% */
-}
-
-.contact-text {
-    flex: 1; /* Erlaubt dem Text zu wachsen und bis zu 50% der Containerbreite einzunehmen */
-    max-width: 45%; /* Beschränkt die maximale Breite des Textes auf 45% */
+.form-container, .contact-text {
+    flex: 1;
+    min-width: 45%;
     padding-right: 30px;
 }
 
 @media (max-width: 768px) {
     #contact {
-        flex-direction: column; /* Stapelt die Elemente auf kleineren Bildschirmen */
+        flex-direction: column;
     }
 
-    .form-container,
-    .contact-text {
-        max-width: 100%; /* Erlaubt Text und Formular die volle Breite auf kleineren Bildschirmen einzunehmen */
+    .form-container, .contact-text {
+        max-width: 100%;
     }
 }
 
-/* Stil für das Formular */
 form {
     background: white;
     padding: 20px;
-    border-radius: 10px; /* Abgerundete Ecken für das Formular */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Leichter Schatten für Tiefe */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-
-input[type="text"],
-input[type="email"],
-textarea {
+input[type="text"], input[type="email"], textarea {
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
     background-color: #f5f5f5;
 }
-
 
 button {
     padding: 10px;
