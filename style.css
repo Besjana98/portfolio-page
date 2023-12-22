@@ -69,8 +69,8 @@ nav a {
 
 
 .section-padding {
-    padding: 50px 0;
-    
+    padding: 20px 0;    
+    margin-left: 20px;    
 }
 
 .content-boxes {
@@ -86,9 +86,29 @@ nav a {
 
 .content-box, .project {
     flex: 0 0 100%; /* Auf kleinen Bildschirmen nehmen Boxen volle Breite ein */
-    margin: 10px;
+    margin: 20px;
     box-sizing: border-box; /* Inkludiert Padding und Border in die Breite */
 }
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;    
+    background-color: black; /* Auffällige Farbe für den Download-Button */
+    color: white; /* Textfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    border-radius: 20px; /* Leicht abgerundete Ecken */
+    font-weight: bold; /* Fettdruck */
+    transition: background-color 0.3s; /* Animiert die Hintergrundfarbe beim Hover */
+    border: none; /*kein Rahmen*/
+    cursor: pointer;
+    text-align: center; /* Zentrierter Text */
+    width: auto; /* Automatische Breite basierend auf Inhalt */
+}
+
+.download-button:hover, .download-button:focus {
+    background-color: grey; /* Dunklere Farbe beim Hover oder Fokus */
+}
+
 
 /* Media Query für Tablets */
 @media (min-width: 768px) {
@@ -104,6 +124,35 @@ nav a {
         flex: 0 0 30%; /* Auf größeren Bildschirmen nehmen Boxen ein Drittel der Breite ein */
     }
 }
+
+.img {
+    width: 250px;  /* Setzt die Standardbreite für alle Bilder mit der Klasse 'img' */
+    height: 250px; /* Setzt die Standardhöhe für alle Bilder mit der Klasse 'img' */
+    object-fit: cover; /* Sorgt dafür, dass die Bilder das Container-Element voll ausfüllen, ohne das Seitenverhältnis zu verzerren */
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black; /* oder eine Farbe Ihrer Wahl */
+    color: white; /* Farbe des Textes */
+    text-decoration: none; /* Keine Unterstreichung */
+    border-radius: 20px; /* Abgerundete Ecken */
+    font-weight: bold; /* Fettdruck */
+    transition: background-color 0.3s; /* Glatter Farbwechsel */
+    border: none; /* Kein Rahmen */
+    cursor: pointer; /* Cursor wird zum Klick-Symbol */
+}
+
+.cv-button:hover {
+    background-color: grey; /* Dunklere Farbe beim Hover */
+}
+
+.cv-button i {
+    margin-left: 5px; /* Kleiner Abstand zwischen Text und Icon */
+}
+
+
 
 .timeline ul {
     list-style-type: none;
@@ -131,24 +180,54 @@ nav a {
 }
 
 
-.contact-info p{
+/* Container für den Kontaktbereich */
+#contact {
     display: flex;
-    align-items: center;
-    color: black; 
-    background: white;    
-    height: 200px;
-    margin: auto;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Zentriert die Elemente und gibt ihnen etwas Abstand */
+    align-items: flex-start; /* Start ausrichtung */
 }
 
-.contact-info i{
+/* Stil für das Kontaktformular und den Textbereich, um sie nebeneinander anzuzeigen */
+.contact-text, .form-container {
+    flex: 1;
+    min-width: 250px; /* Minimale Breite, damit die Elemente nicht zu schmal werden */
+    max-width: 50%; /* Maximale Breite von 50%, um sie auf die Hälfte des Containers zu beschränken */
+}
+
+/* Kontaktinformationen unter dem Textbereich */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0; /* Abstand oben und unten */
+}
+
+/* Stil-Anpassung für Icons und Text in der Kontaktinfo */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Abstand zwischen den Kontaktinformationen */
+}
+
+.contact-info i {
     margin-right: 10px;
 }
 
+/* Stil für das Formular */
 form {
-    display: flex;
-    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px; /* Abgerundete Ecken für das Formular */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Leichter Schatten für Tiefe */
 }
+
+@media (max-width: 768px) {
+    /* Anpassungen für kleinere Bildschirme */
+    .contact-text, .form-container {
+        max-width: 100%; /* Lässt Text und Formular die volle Breite einnehmen */
+    }
+}
+
 
 input[type="text"],
 input[type="email"],
@@ -157,6 +236,7 @@ textarea {
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
 
@@ -178,5 +258,5 @@ footer {
     padding: 1em 0;    
     bottom: 0;
     width: 100%;
-    background: white;
+    background: #f5f5f5;
 }

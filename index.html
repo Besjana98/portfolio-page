@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio-Seite</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -19,27 +19,61 @@
                 </ul>
             </nav>            
             <div class="intro">
-                <h2>Herzlich Willkommen!</h2>              
+                <h2>Herzlich Willkommen!</h2>
+                <a href="Docs/Besjana_Latifi_CV_01.pdf" class="cv-button" download>
+                    CV <i class="fa fa-download"></i>
+                  </a>              
             </div>                
         </div>
     </header>
 
     <section id="about-me" class="section-padding">
-        <h2>Über mich</h2>                     
+        <h2>Über mich</h2> 
+        <img src="images/Bild1.jpg" alt="CV" class="img">
+        <img src="images/nature.jpg" alt="CV" class="img">
+        <img src="images/office.jpg" alt="CV" class="img">
+        <img src="images/mocktails.jpg" alt="CV" class="img">
+        <img src="images/wedding.jpg" alt="CV" class="img">                    
         <div class="content-boxes">
             <div class="content-box">
                 <section id="steckbrief">                    
                     <h3>Steckbrief</h3>  
-                    <img src="images/Bild1.jpg" alt="CV" class="img">                  
-                    <p>Name: Besjana Latifi</p>
-                    <p>Geburtsdatum: 26. Januar 1998</p>
-                    <p>Geburtsort: Ittigen</p>
+                    
+                    <l>
+                        <ul>           
+                            <li>Name: Besjana Latifi</li>
+                            <li>Geburtsdatum: 26. Januar 1998</li>
+                            <li>Geburtsort: Ittigen</li>
+                            <li>Wohnort: Ostermundigen</li>
+                            <li>Hobby's: <br>
+                            <l>
+                            <ul>
+                                <li>Schmackhafte Mocktails zubereiten</li>
+                                <li>Anime Serien</li>
+                                <li>Videospiele</li>
+                                <li>Familie und Freunde</li>
+                            </ul>
+                            </l> 
+                             <li>Ausbildung: Aktuell im Studim als Wirtschaftsinformatikerin</li>
+                             <li>Funktionen: Sachbearbeiterin bei der Valiant Bank</li>
+                             <li>Fähigkeiten: Finance, IT-Support, Testing, Datenanalyse</li>
+                             <li>Mein Ziele: Work-Life-Balance</li>
+                             <li>Interessen: <br>
+                                <l>
+                                    <ul>
+                                        <li>Reisen</li>
+                                        <li>Kulturelle Geschmacksexpeditionen</li>
+                                        <li>Sprachen</li>
+                                        <li>IT-Technologien</li> 
+                                    </ul>                                
+                        </ul>  
+                    </l>     
                 </section>
             </div>            
             <div class="content-box">
                 <section id="beruf" class="timeline">
                     <h3>Beruf</h3>
-                    <img src="images/work.png" alt="Beruf" class="img">
+                    <img src="images/work.png" alt="Beruf" class="png">
                     
                     <ul>
                         <li><time datetime="2023-02">Feb 2023 - Aktuell</time><br> Sachbearbeiterin Front Support,<br> Valiant Bank AG</li>                        
@@ -53,7 +87,7 @@
             <div class="content-box">
                 <section id="ausbildung" class="timeline">
                     <h3>Ausbildung</h3>
-                    <img src="images/school.png" alt="Beruf" class="img">                    
+                    <img src="images/school.png" alt="Beruf" class="png">                    
                     <ul>
                         <li><time datetime="2020-09">2020 - Aktuell</time><br> Wirtschaftsinformatik, BFH</li>
                         <li><time datetime="2019-08">2019 - 2020</time><br>Bildungsgang Banking & Finance Essentials,<br> CYP Association</li>
@@ -71,44 +105,58 @@
             <div class="project">
                 <section id="TWINT" class="project-grid-section">
                     <h3>TWINT Anforderungsspezifikation</h3>
-                    <a href="Docs/WREQ-FS2022-Latifi-Besjana.pdf">Dokument herunterladen</a>                    
+                    <a href="Docs/WREQ-FS2022-Latifi-Besjana.pdf" class="download-button">Dokument herunterladen</a>                    
                 </section>
             </div>
             <div class="project">
                 <section id="EBICS" class="project-grid-section">
                     <h3>EBICS Anforderungsspezifikation</h3>
-                    <a href="Docs/BPTW_Transferarbeit_BesjanaLatifi_FS2023.pdf">Dokument herunterladen</a>                    
+                    <a href="Docs/BPTW_Transferarbeit_BesjanaLatifi_FS2023.pdf" class="download-button">Dokument herunterladen</a>                    
                 </section>
             </div>
             <div class="project">
                 <section id="Kontaktbuch" class="project-grid-section">
                     <h3>Kontaktbuch im Python</h3>
-                    <a href="Docs/Einzelarbeit csv.py">Python-Script anzeigen</a>                    
+                    <a href="Docs/Einzelarbeit csv.py" class="download-button">Python-Script anzeigen</a>                    
                 </section>
             </div>            
         </div>
     </section>
 
     <section id="contact-info" class="section-padding">
-        <h2>Kontakt</h2>
-        <section id="contact" class="section-padding">
-            <h2>Get in touch.</h2>
-            <p>Here is a good spot for a message to your readers to let them know how best to reach out to you.</p>
-            <div class="contact-info">
-                <p><i class="fa fa-envelope"></i> besjana.latifi@students.bfh.ch</p>
-                <p><i class="fa fa-instagram"></i> @b.essaaa</p>
-                <p><i class="fa fa-github"></i> Besjana98</p>
+        <h2>Kontaktaufnahme</h2>
+        <section id="contact">            
+            <div class="contact-text">
+                <p>Ich freue mich über Ihr Interesse an meiner Arbeit und meinen Projekten. 
+                    Wenn Sie Fragen haben, mehr über meine Erfahrungen erfahren möchten oder einfach nur Hallo sagen wollen, zögern Sie nicht, mich zu kontaktieren. 
+                    Füllen Sie das untenstehende Formular aus oder erreichen Sie mich direkt über meine sozialen Medien.
+                    Ich bemühe mich, so schnell wie möglich zu antworten, und freue mich darauf, von Ihnen zu hören!</p>
+                <div class="contact-info">
+                    <p>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:besjana.latifi@students.bfh.ch">besjana.latifi@students.bfh.ch</a>
+                    </p>
+                    <p>
+                        <i class="fab fa-linkedin"></i>
+                        <a href="linkedin.com/in/besjana-latifi-0a0607252" target="_blank">Besjana Latifi</a>
+                    </p>                    
+                    <p>
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Besjana98" target="_blank">Besjana98</a>
+                    </p>
+                </div>
             </div>
-            <form action="http://localhost:3000/send-form" method="POST">
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <textarea id="message" name="message" placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-                    
+            <div class="form-container">
+                <form action="http://localhost:3000/send-form" method="POST">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>                    
     </section>
-
+    
     <footer>
         <p>© 2023 Besjana Latifi</p>
     </footer>
